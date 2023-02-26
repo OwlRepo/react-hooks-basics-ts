@@ -25,5 +25,32 @@ module.exports = {
         fixStyle: "inline-type-imports",
       },
     ],
+    "import/no-restricted-paths": [
+      "error",
+      {
+        zones: [
+          {
+            target: "./src/core",
+            from: "./src/components",
+          },
+          {
+            target: "./src/core",
+            from: "./src/lib",
+          },
+          {
+            target: "./src/core",
+            from: "./src/pages",
+          },
+          {
+            target: "./src/lib",
+            from: "./src/pages",
+          },
+          {
+            target: "./src/components",
+            from: "./src/pages",
+          },
+        ],
+      },
+    ],
   },
 };
