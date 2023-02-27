@@ -2,6 +2,7 @@ import { useCounter } from "~/lib/hooks/home";
 
 const UseStateCounterForm = (): JSX.Element => {
   const [count, incrementCount, decrementCount] = useCounter();
+
   return (
     <div className="grid min-w-full grid-cols-1 place-items-center text-white sm:grid-cols-2">
       <b>useState</b>
@@ -9,7 +10,7 @@ const UseStateCounterForm = (): JSX.Element => {
         <button onClick={decrementCount} className="btn">
           -
         </button>
-        <b>{count?.toString()}</b>
+        <b>{count}</b>
         <button onClick={incrementCount} className="btn">
           +
         </button>

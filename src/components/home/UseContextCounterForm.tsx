@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UseCounterContext } from "~/lib/hooks/home/useCounter";
+import { UseCounterContext } from "~/lib/context/home/UseCounterContext";
 import type UseContextCounterFormProps from "~/lib/types/home/UseContextCounterFormProps";
 
 const UseContextCounterForm = (
@@ -14,7 +14,7 @@ const UseContextCounterForm = (
         <button onClick={props.decreaseCount} className="btn">
           -
         </button>
-        <b>{countFromContext?.toString()}</b>
+        <b>{countFromContext}</b>
         <button onClick={props.increaseCount} className="btn">
           +
         </button>

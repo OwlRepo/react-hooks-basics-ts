@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 
 const countDefaultValue = 0;
 
@@ -9,7 +9,5 @@ const useCounter = (): [number, () => void, () => void] => {
 
   return [count, incrementCount, decrementCount];
 };
-
-export const UseCounterContext = createContext<number>(countDefaultValue);
 
 export default useCounter;

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { UseCounterContext } from "~/lib/hooks/home/useCounter";
+import { UseCounterContext } from "~/lib/context/home/UseCounterContext";
 import UseContextCounterForm from "./UseContextCounterForm";
 
 const CounterContext = (): JSX.Element => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
   const increaseCount = () => setCount((prevState) => prevState + 1);
   const decreaseCount = () => setCount((prevState) => prevState - 1);
 
